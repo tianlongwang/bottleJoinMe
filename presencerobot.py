@@ -34,7 +34,9 @@ def session():
 def token():	
 	return tokinit.get_session_token()['token']
 
-#run()
+port = int(os.environ.get("PORT", 5000))
+run(host='0.0.0.0', port=port)
+		
 #run(server='gae')
-run(server='gevent', port=os.environ.get('PORT', 5000))
+#run(server='gevent', port=os.environ.get('PORT', 5000))
 #run(host=ip, port=8080)
