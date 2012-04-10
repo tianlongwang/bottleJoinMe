@@ -1,6 +1,6 @@
 PyRSS2Gen==1.0.0
 Twisted==11.0.0
-altgraph==0.7.1
+altgraph==0.7.2
 bdist-mpkg==0.4.4
 bonjour-py==0.3
 bottle==0.10.9
