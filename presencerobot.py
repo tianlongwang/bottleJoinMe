@@ -2,6 +2,7 @@
 from bottle import route, run, request, template
 import time
 import tokinit
+import os
 
 #ip = "140.180.9.84"
 
@@ -34,7 +35,7 @@ def session():
 def token():	
 	return tokinit.get_session_token()['token']
 
-port = int(os.environ.get("PORT", 5000))
+port = (os.environ.get("PORT", 5000))
 run(host='0.0.0.0', port=port)
 		
 #run(server='gae')
