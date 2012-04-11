@@ -9,12 +9,14 @@ import os
 @route('/control')
 def control():
 	new_state = request.GET.get('state', None)
+	translate = {'w':'Moving Forward','x':'Moving Backward','a':'Turning Left','d':'Turning Right','s':'stop'};
 	if new_state is not None:
 		with open('./state','w') as fw:
 			fw.write(new_state) 
 	with open('./state','r') as f:
 		state = f.read()
-	return template('./template.html', state=state)
+	description = translate[state]
+	return template('./template.html', description=description)
 
 @route('/value')
 def value():
