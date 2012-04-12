@@ -27,11 +27,16 @@ def value():
 @route('/')
 @route('/video')
 def video():
-	return template('./video.html')
+	session = tokinit.get_session_token()['session']
+	with open('./session','w') as fs:
+		fs.write(session)
+	return template('./video.html',session=session)
 
 @route('/session')
 def session():
-	return tokinit.get_session_token()['session']
+	with open('./session', 'r') as fsr:
+		session = fsr.read()
+	return session
 
 @route('/token')
 def token():	
