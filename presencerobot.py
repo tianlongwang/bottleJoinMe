@@ -9,7 +9,7 @@ import os
 @route('/control')
 def control():
 	new_state = request.GET.get('state', None)
-	translate = {'w':'Moving Forward','x':'Moving Backward','a':'Turning Left','d':'Turning Right','s':'stop'};
+	translate = {'w':'Moving Forward','x':'Moving Backward','a':'Turning Left','d':'Turning Right','s':'Stop Moving','r':'Looking Up','f':'Looking Down'};
 	if new_state is not None:
 		with open('./state','w') as fw:
 			fw.write(new_state) 
