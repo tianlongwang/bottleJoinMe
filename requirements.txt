@@ -2,7 +2,7 @@ PyRSS2Gen==1.0.0
 Twisted==11.0.0
 altgraph==0.7.2
 bdist-mpkg==0.4.4
-bottle==0.10.9
+bottle==0.12.19
 certifi==0.0.8
 chardet==1.0.1
 heroku==0.1.2
