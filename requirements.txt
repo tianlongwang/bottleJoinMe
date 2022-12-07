@@ -3,7 +3,7 @@ Twisted==11.0.0
 altgraph==0.7.2
 bdist-mpkg==0.4.4
 bottle==0.10.9
-certifi==0.0.8
+certifi==2022.12.7
 chardet==1.0.1
 heroku==0.1.2
 macholib==1.3
